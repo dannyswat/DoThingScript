@@ -1,8 +1,8 @@
 # DoThingScript
-Create a programmable script to allow users to customize the logic safely
+Create a programmable script to allow users to customize the logic safely.\
 Used with C# applications
 
-# Expected Features
+## Expected Features
 - Support static typed variables/constants
 - Primitive types: string, number, integer, boolean, guid
 - Pre-defined object initialization
@@ -13,7 +13,7 @@ Used with C# applications
 - Label and goto statement
 - Error handling
 
-# Examples
+## Examples
 
 const Context // Predefined constant\
 integer i = 1 // Variable\
