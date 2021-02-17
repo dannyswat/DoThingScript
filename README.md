@@ -14,6 +14,9 @@ Used with C# applications
 - Label and goto statement
 - Error handling
 - Global scoped
+- Generate Documentation based on run time instance
+- Execution Timeout
+- Logging
 
 ## Examples
 
