@@ -4,14 +4,16 @@ Used with C# applications
 
 ## Expected Features
 - Support static typed variables/constants
-- Primitive types: string, number, integer, boolean, guid
+- Primitive types: string, number, integer, boolean, guid, datetime
 - Pre-defined object initialization
 - Built-in functions and pre-defined functions
 - Task functions for deferred execution
 - Expression
 - If then else statement
+- ForEach statement
 - Label and goto statement
 - Error handling
+- Global scoped
 
 ## Examples
 
@@ -30,7 +32,47 @@ i = i + 1 // Variable assignment\
 GoTo Loop // Go to label statement\
 EndIf // End if
 
+List = GetList()
+
+ForEach item in List
+
+EndForEach
+
 Error: // Error handling\
 IgnoreError(SendErrorEmail("dan@abc.com"))\
 ErrorLog("Error occurred")\
 ErrorLog(Exception)
+
+## Built-in Functions
+- IgnoreError(Task...)
+- Run(Task...)
+- ParallelRun(Task...)
+- HttpRequest(Url, Method, Headers, Data)
+- NewObject(Type, Key, Value, Key, Value,...)
+- Json(Key, Value, Key, Value,...)
+- Header(Key, Value)
+- Log(Message, ...)
+- ErrorLog(Message, Exception, ...)
+- Now()
+- NewDate(Year, Month, Day, Hour, Minute, Second)
+- AddDate(DateTime, Interval, Unit)
+- StringList(String...)
+- IntegerList(Integer...)
+
+#### RunTime Class
+- Constants
+- Variables
+- BuiltInFunctions
+- CustomFunctions
+- NewObjectTypes
+- ScriptItems
+- ErrorScriptItems
+- Labels
+
+#### Parsed Scripts
+- FunctionItem (Function, Parameters)
+- VariableItem (Name)
+- IfItem (ExpressionItem, ThenScriptItems, ElseScriptItems)
+- ForEachItem (VariableItem, ScriptItems)
+- LabelItem
+- GotoItem
